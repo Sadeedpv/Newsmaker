@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/newsmaker/static/css/main.588d008f.css",
+    "main.js": "/newsmaker/static/js/main.2667797e.js",
+    "index.html": "/newsmaker/index.html",
+    "main.588d008f.css.map": "/newsmaker/static/css/main.588d008f.css.map",
+    "main.2667797e.js.map": "/newsmaker/static/js/main.2667797e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.588d008f.css",
+    "static/js/main.2667797e.js"
+  ]
+}
