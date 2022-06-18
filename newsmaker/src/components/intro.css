@@ -1,0 +1,33 @@
+.flex-intro {
+  display: grid;
+  place-items: center;
+}
+.flex-intro .flex-hero {
+  flex: 1;
+  padding: 20px;
+  font-size: min(1.8em, 5.5vw);
+}
+.flex-intro .flex-hero h1 {
+  max-width: 10em;
+  line-height: 1.75em;
+  text-align: center;
+  margin-top: 1.34em;
+  text-shadow: 4px -2px 28px rgba(15, 98, 254, 0.33);
+}
+.flex-intro .flex-hero h1 .purple {
+  color: #0F62FE;
+}
+.flex-intro .flex-hero .subhead {
+  color: black;
+  opacity: 45%;
+  line-height: 1.45;
+  margin-top: 1.5em;
+  text-align: center;
+}
+.flex-intro .flex-img {
+  padding: 15px;
+}
+.flex-intro .flex-img svg {
+  width: 100%;
+  margin-top: 2em;
+}/*# sourceMappingURL=intro.css.map */

@@ -1,0 +1,72 @@
+.flex-nav {
+  display: flex;
+  z-index: 999;
+  justify-content: space-around;
+  box-shadow: 7.8px 11.8px 7.1px rgba(0, 0, 0, 0.025), 62px 94px 57px rgba(0, 0, 0, 0.05);
+}
+.flex-nav .nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-nav .nav-header h2 {
+  text-transform: uppercase;
+  align-items: center;
+  padding: 20px;
+  font-size: min(2em, 5.5vw);
+  margin-right: 5px;
+}
+.flex-nav .nav-header h2:hover {
+  color: #816203;
+}
+.flex-nav .nav-item {
+  display: flex;
+}
+.flex-nav .nav-item ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
+}
+.flex-nav .nav-item ul li {
+  list-style: none;
+  justify-content: space-around;
+  padding-right: 2.5em;
+  font-weight: 550;
+  font-size: 1.2em;
+}
+.flex-nav .nav-item ul li .input {
+  border-radius: 10px;
+  padding-right: 10px;
+  padding-left: -10px;
+  border: 0px solid black;
+  outline: none;
+}
+.flex-nav .nav-item ul li .input::focus {
+  border: 2px solid black !important;
+}
+.flex-nav .nav-item ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 0.5em;
+}
+.flex-nav .nav-item ul li a:hover {
+  color: #816203;
+}
+.flex-nav .nav-item ul li .hover:hover .arrowicon {
+  transform: rotate(180deg) translateY(-20%);
+}
+
+@media all and (max-width: 698px) {
+  .flex-nav .nav-item ul li .input {
+    display: none;
+  }
+}
+@media all and (max-width: 458px) {
+  .flex-nav .nav-item ul li {
+    font-size: 0.9em;
+  }
+  .flex-nav .nav-item ul li a {
+    white-space: nowrap;
+  }
+}/*# sourceMappingURL=navbar.css.map */
