@@ -4,6 +4,8 @@ import './navbar.css'
 import {FaSearch, FaAngleUp} from 'react-icons/fa'
 
 function Navbar() {
+
+    const category = ['business', 'entertainment', 'general', 'health', 'science', 'sports', 'technology']
   return (
     <div className='flex-nav'>
         <div className='nav-header'>
@@ -15,7 +17,7 @@ function Navbar() {
                     <Input placeholder='Search' size='large' suffix={<FaSearch />} className='input'/>
                 </li>
                 <li>
-                    <Drop />
+                    <Drop category={category}/>
                 </li>
                 <li>
                     <a href='https://Github.com/Sadeedpv'>Github</a>
@@ -29,14 +31,14 @@ function Navbar() {
 }
 
 
-function Drop(){
+function Drop(props){
     return(
         <Dropdown className='dropdown'
         render={
             <Dropdown.Menu>
-                <Dropdown.Item>Menu Item 1</Dropdown.Item>
-                <Dropdown.Item>Menu Item 2</Dropdown.Item>
-                <Dropdown.Item>Menu Item 3</Dropdown.Item>
+                {props.category.map((item, index) =>{
+                    return <Dropdown.Item key={index}>{item}</Dropdown.Item>
+                })}
             </Dropdown.Menu>
         }
     >
