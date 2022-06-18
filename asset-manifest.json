@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/newsmaker/static/css/main.588d008f.css",
-    "main.js": "/newsmaker/static/js/main.0ae0ee8a.js",
+    "main.js": "/newsmaker/static/js/main.09c47f3b.js",
     "index.html": "/newsmaker/index.html",
     "main.588d008f.css.map": "/newsmaker/static/css/main.588d008f.css.map",
-    "main.0ae0ee8a.js.map": "/newsmaker/static/js/main.0ae0ee8a.js.map"
+    "main.09c47f3b.js.map": "/newsmaker/static/js/main.09c47f3b.js.map"
   },
   "entrypoints": [
     "static/css/main.588d008f.css",
-    "static/js/main.0ae0ee8a.js"
+    "static/js/main.09c47f3b.js"
   ]
 }
