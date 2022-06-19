@@ -1,15 +1,23 @@
-import React from 'react'
-import './intro.css'
+import React, { useEffect, useRef } from 'react';
+import './intro.css';
+import {gsap} from 'gsap';
 
 function Intro() {
+  const ref = useRef();
+  const ref2 = useRef();
+
+  useEffect(() =>{
+    gsap.fromTo(ref.current, {opacity:0, x:-80}, {opacity:1,x:0, duration:1, delay:0.6});
+    gsap.fromTo(ref2.current, {opacity:0, x:80}, {opacity:1,x:0, duration:1, delay:0.8});
+  },[])
   return (
     <div className='flex-intro'>
-        <div className='flex-hero'><h1>Get updates on Latest{' '}
+        <div className='flex-hero'><h1 ref={ref}>Get updates on Latest{' '}
             <span className='purple'>#News</span>,
             <span className='purple'>Blogs</span> and
             <span className='purple'>Articles</span>
         </h1>
-        <p className='subhead'>Read all the news, articles and blogs for free. </p>
+        <p className='subhead' ref={ref2}>Read all the news, articles and blogs for free. </p>
         </div>
         <div className='flex-img'>
         <svg
