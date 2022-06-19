@@ -31,13 +31,15 @@ function Search() {
             alignItems: 'center',
             justifyContent: 'center',
             color: 'black',
-            fontSize: '2em',
+            fontSize: '1.4em',
             fontWeight: '500',
-            padding: '1em',
+            padding: '1.4em',
+            whiteSpace:'nowrap'
         }}>See What's happening on {'   '}<span style={{
             color: '#f9a825',
             fontWeight:'650',
-            padding:'5px'
+            padding:'5px',
+            whiteSpace:'nowrap'
         }}>{input}</span></div>
         <div ref={spinref} style={{display:'grid', placeItems:'center', marginTop:'40px'}}><Spin size='large' /></div>
         <div className='flex-card'>
