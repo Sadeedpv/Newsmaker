@@ -6,11 +6,14 @@ import { Spin } from '@douyinfe/semi-ui';
 function Popular() {
     const spinref = useRef()
     const [posts, setPosts] = useState();
+    const [err, seterr] = useState();
 
     useEffect(() =>{
         spinref.current.style.display = 'none';
         axios.get(`https://gnews.io/api/v4/top-headlines?lang=en&token=${process.env.REACT_APP_API_KEY}`).then(res =>{
             setPosts(res.data.articles)
+        }).catch(err =>{
+            seterr('No posts found');
         })
     }, [])
   return (
@@ -25,6 +28,8 @@ function Popular() {
                 <Card title={post.title} key={index} author={post.source.name} desc = {post.description} img={post.image} date={post.publishedAt} url={post.url}/>
             )
         })}
+
+        {err && <p style={{color:'red', textAlign:'center', fontSize:'2rem'}}>{err}</p>}
     </div>
     </>
   )

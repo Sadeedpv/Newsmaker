@@ -64,7 +64,7 @@
 }
 @media all and (max-width: 458px) {
   .flex-nav .nav-item ul li {
-    font-size: 0.9em;
+    font-size: 1.2em;
   }
   .flex-nav .nav-item ul li a {
     white-space: nowrap;

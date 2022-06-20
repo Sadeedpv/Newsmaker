@@ -15,7 +15,9 @@ function Navbar() {
     { search && (navigate('/search', { state: { input:input} })) }
     <div className='flex-nav'>
         <div className='nav-header'>
-            <h2>news</h2>
+            <h2 onClick={() =>{
+                window.location.reload();
+            }}>news</h2>
         </div>
         <div className='nav-item'>
             <ul>

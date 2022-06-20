@@ -31,7 +31,7 @@ function Search() {
             alignItems: 'center',
             justifyContent: 'center',
             color: 'black',
-            fontSize: '1.4em',
+            fontSize: '1.6em',
             fontWeight: '500',
             padding: '1.4em',
             whiteSpace:'nowrap'
