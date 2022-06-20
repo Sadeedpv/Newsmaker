@@ -1,6 +1,6 @@
 # Newsmaker
 
-## Use this app to read your favourite news, blogs and articles(all in one). Want to read an article on football or want to know more about science, you can get everything from this app 🤠.
+## Use this app to read your favourite news, blogs and articles(all in one). Want to read an article on football or want to know more about science? you can get everything from this app 🤠.
 
 
 ![Logo](https://i.pinimg.com/originals/bf/73/5d/bf735da9e11a1fd910c8cf0a682f8015.png)
