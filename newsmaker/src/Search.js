@@ -8,11 +8,11 @@ import {Card} from './components/Popular';
 import './components/popular.css'
 
 
-function Search() {
+function Search(props) {
 
     const navigate = useNavigate()
     const {state} = useLocation();
-    const {input} = state;
+    const {input} = state || props.input;
 
     const [post, setPosts] = useState();
     const spinref = useRef();
@@ -23,35 +23,36 @@ function Search() {
             setPosts(res.data.articles)
         })
     }, [])
+        return (
+            <>
+        
+                <div style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: 'black',
+                    fontSize: '1.6em',
+                    fontWeight: '500',
+                    padding: '1.4em',
+                    whiteSpace:'nowrap'
+                }}>See What's happening on {'   '}<span style={{
+                    color: '#f9a825',
+                    fontWeight:'650',
+                    padding:'5px',
+                    whiteSpace:'nowrap'
+                }}>{input}</span></div>
+                <div ref={spinref} style={{display:'grid', placeItems:'center', marginTop:'40px'}}><Spin size='large' /></div>
+                <div className='flex-card'>
+                {post && post.map((post, index) =>{
+                    return(
+                        <Card title={post.title} key={index} author={post.source.name} desc = {post.description} img={post.image} date={post.publishedAt} url={post.url}/>
+                    )
+                })}
+                </div>
+                <Footer />
+            </>
+          )
 
-  return (
-    <>
-        <div style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            color: 'black',
-            fontSize: '1.6em',
-            fontWeight: '500',
-            padding: '1.4em',
-            whiteSpace:'nowrap'
-        }}>See What's happening on {'   '}<span style={{
-            color: '#f9a825',
-            fontWeight:'650',
-            padding:'5px',
-            whiteSpace:'nowrap'
-        }}>{input}</span></div>
-        <div ref={spinref} style={{display:'grid', placeItems:'center', marginTop:'40px'}}><Spin size='large' /></div>
-        <div className='flex-card'>
-        {post && post.map((post, index) =>{
-            return(
-                <Card title={post.title} key={index} author={post.source.name} desc = {post.description} img={post.image} date={post.publishedAt} url={post.url}/>
-            )
-        })}
-        </div>
-        <Footer />
-    </>
-  )
 }
 
 export default Search

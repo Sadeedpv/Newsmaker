@@ -10,7 +10,7 @@ root.render(
     <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes >
             <Route path="/" element={<App />} />
-            <Route path='/search' element={<Search input='novalue'/>} />
+            <Route path='/search' element={<Search input=''/>} />
         </Routes>
     </BrowserRouter>
 );
