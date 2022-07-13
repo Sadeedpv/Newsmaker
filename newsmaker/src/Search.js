@@ -34,12 +34,11 @@ function Search(props) {
                     fontSize: '1.6em',
                     fontWeight: '500',
                     padding: '1.4em',
-                    whiteSpace:'nowrap'
+                    textAlign: 'center',
                 }}>See What's happening on {'   '}<span style={{
                     color: '#f9a825',
                     fontWeight:'650',
                     padding:'5px',
-                    whiteSpace:'nowrap'
                 }}>{input}</span></div>
                 <div ref={spinref} style={{display:'grid', placeItems:'center', marginTop:'40px'}}><Spin size='large' /></div>
                 <div className='flex-card'>
